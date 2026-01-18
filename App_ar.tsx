@@ -404,8 +404,7 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
                                         const baseAnnual = getUnitBasePrice(unit, activeCase);
                                         const effectiveAnnual = baseAnnual * effectiveOccupancy;
                                         const dailyRate = Math.round(baseAnnual / 365);
-                                        const monthlyGross = effectiveAnnual / 12;
-                                        const monthlyNet = monthlyGross * (1 - managementFee);
+                                        const annualNet = effectiveAnnual * (1 - managementFee);
 
                                         return (
                                             <div key={idx} className="border-b border-white/5 last:border-0 pb-4 last:pb-0">
@@ -433,15 +432,15 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
                                                         </p>
                                                     </div>
                                                     <div className="bg-white/5 rounded-lg p-3 border border-white/5">
-                                                        <p className="text-[9px] text-white/40 uppercase tracking-widest mb-1">الإيراد الشهري</p>
+                                                        <p className="text-[9px] text-white/40 uppercase tracking-widest mb-1">الإيراد السنوي</p>
                                                         <p className="text-lg font-bold text-white tabular-nums">
-                                                            {formatCurrency(monthlyGross)}
+                                                            {formatCurrency(effectiveAnnual)}
                                                         </p>
                                                     </div>
                                                     <div className="bg-emerald-500/10 rounded-lg p-3 border border-emerald-500/20">
-                                                        <p className="text-[9px] text-emerald-400/60 uppercase tracking-widest mb-1">صافي دخل المالك</p>
+                                                        <p className="text-[9px] text-emerald-400/60 uppercase tracking-widest mb-1">صافي الدخل السنوي</p>
                                                         <p className="text-lg font-bold text-emerald-400 tabular-nums">
-                                                            {formatCurrency(monthlyNet)}
+                                                            {formatCurrency(annualNet)}
                                                         </p>
                                                     </div>
                                                 </div>
