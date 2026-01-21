@@ -150,7 +150,7 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
   const [activeScenarioId, setActiveScenarioId] = useState<string>(SCENARIOS[0].id);
   const [activeCase, setActiveCase] = useState<CaseType>('base');
   const [occupancyRate, setOccupancyRate] = useState<number>(0.8); // Default to 80%
-  const [managementFee, setManagementFee] = useState<number>(0.20);
+  const [managementFee, setManagementFee] = useState<number>(0.25);
 
   const activeScenario = scenarios.find(s => s.id === activeScenarioId) || scenarios[0];
   const baseFinancials = activeScenario.financials[activeCase];
@@ -190,7 +190,7 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
   ];
 
   const feeOptions = [
-      { value: 0.20, label: '٢٠٪' },
+      { value: 0.25, label: '٢٥٪' },
   ];
   
   // Build ledger items dynamically

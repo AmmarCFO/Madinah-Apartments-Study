@@ -18,8 +18,8 @@ export const SCENARIOS: Scenario[] = [
             // 3BR: 471 * 365 = 171,915
             // Total: 233,965
             revenue: 233965, 
-            mabaatShare: 46793, // 20%
-            netIncome: 187172, 
+            mabaatShare: 58491, // 25%
+            netIncome: 175474, 
             roi: 0
         },
         base: {
@@ -27,8 +27,8 @@ export const SCENARIOS: Scenario[] = [
             // 3BR: 551 * 365 = 201,115
             // Total: 269,370
             revenue: 269370, 
-            mabaatShare: 53874, // 20%
-            netIncome: 215496, 
+            mabaatShare: 67343, // 25%
+            netIncome: 202027, 
             roi: 0
         },
         best: {
@@ -36,8 +36,8 @@ export const SCENARIOS: Scenario[] = [
             // 3BR: 630 * 365 = 229,950
             // Total: 304,410
             revenue: 304410, 
-            mabaatShare: 60882, // 20%
-            netIncome: 243528, 
+            mabaatShare: 76103, // 25%
+            netIncome: 228307, 
             roi: 0
         }
     },
@@ -92,5 +92,5 @@ export const COMPARISON_LINKS: Record<string, ComparisonLink[]> = {
   study_madinah: []
 };
 
-export const MABAAT_SHARE_PERCENTAGE = 0.20;
+export const MABAAT_SHARE_PERCENTAGE = 0.25;
 export const BRANCHES: Branch[] = [];
